@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>e-commerce</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <script src="about.js"></script>
+    </div>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">SkinBloom</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav m-auto my-2 my-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="addtocart.html">add to cart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">about</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">blog</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="px-2 search" type="search" placeholder="Search" aria-label="Search" />
+                    <button class="btn0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <section class="cart-header">
+        <h1>Wanna Know More About Us..?</h1>
+        <p>Glowing skin, just one step away ✨</p>
+    </section>
+
+<section>
+  <div class="container py-5">
+    <div class="row g-4" id="product-list"></div>
+  </div>
+</section>
+<script>const products = [
+  {
+    img: "css/assets/pic1.jpg",
+    title: "Lip Magic",
+    desc: "Explore bold, matte, and glossy lipsticks for every vibe.",
+  },
+  {
+    img: "css/assets/pic2.jpg",
+    title: "Shadow Art",
+    desc: "Vibrant palettes to match your inner artist.",
+  },
+  {
+    img: "css/assets/pic3.jpg",
+    title: "Brush Up",
+    desc: "Tools that blend magic into your daily routine.",
+  },
+  {
+    img: "css/assets/pic4.jpg",
+    title: "Gloss Heaven",
+    desc: "Shiny glosses to brighten your smile.",
+  },
+  {
+    img: "css/assets/pic5.jpg",
+    title: "Glow Time",
+    desc: "Highlighters that catch the light and hearts.",
+  },
+  {
+    img: "css/assets/pic6.jpg",
+    title: "Smooth Base",
+    desc: "Primers for a flawless foundation start.",
+  },
+];
+
+const productList = document.getElementById("product-list");
+
+products.forEach((product) => {
+  const col = document.createElement("div");
+  col.className = "col-md-4";
+
+  col.innerHTML = `
+    <div class="card">
+      <img src="${product.img}" class="card-img-top" alt="${product.title}">
+      <div class="card-body">
+        <h5 class="card-title">${product.title}</h5>
+        <p class="card-text">${product.desc}</p>
+      </div>
+    </div>
+  `;
+
+  productList.appendChild(col);
+});
+</script>
+
+    <section class="row g-0 p-5 about-section align-items-center bg-light">
+        <div class="col-md-4 mb-4 mb-md-0">
+            <img src="css/assets/aboutwall.jpeg" class="img-fluid w-100 rounded-4 shadow-img" alt="Portfolio Image" />
+        </div>
+        <div class="col-md-8">
+            <div class="bg-white p-3 rounded-4 shadow-box transition-box">
+                <h2 class="fw-bold mb-4 display-6">More About Us...</h2>
+                <p class="text-muted fs-5 lh-lg mb-4">
+                    Located in the heart of the United States, our skincare shop is dedicated to redefining beauty
+                    through simplicity, science, and self-care. We offer a thoughtfully curated range of products that
+                    blend cutting-edge dermatological research with nature’s purest ingredients — all designed to
+                    nourish, restore, and protect your skin. Whether you’re dealing with dryness, acne, sensitivity, or
+                    simply looking to maintain a radiant glow, our collection includes trusted brands known for their
+                    effectiveness and safety. We believe that skincare is not just about appearance — it’s about
+                    confidence, health, and a daily ritual of self-love. Each product on our shelves is cruelty-free,
+                    tested for quality, and crafted to suit diverse skin tones and types. With a commitment to
+                    transparency and sustainability, we invite you to explore a skincare experience that’s as empowering
+                    as it is luxurious. Welcome to a space where your natural beauty is honored, and your skin’s
+                    well-being comes first.
+                </p>
+                <p class="fst-italic text-secondary fs-6 mb-0">With pleasure.</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="iframe-section d-flex justify-content-center align-items-center">
+        <div class="content-box text-center">
+            <h2 class="fw-bold mb-4">Explore Our Skincare location</h2>
+            <p class="text-muted mb-4">
+                Trusted by millions for clean, effective skincare solutions.
+            </p>
+
+            <div class="iframe-wrapper shadow-lg rounded-4 overflow-hidden">
+                <iframe src="https://www.theordinary.com/en-us" title="Skincare Company Preview" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer text-white pt-5 pb-4">
+        <div class="container text-md-start text-center">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h2 class="fw-bold pink-title">SkinBloom</h2>
+                    <p class="footer-text">
+                        Glow with confidence. Our clean, cruelty-free skincare helps you feel beautiful in your own skin
+                        — naturally.
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Explore</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="index.html" class="footer-link">About</a></li>
+                        <li><a href="addtocart.html" class="footer-link">add to cart</a></li>
+                        <li><a href="#" class="footer-link">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6 class="fw-semibold text-uppercase mb-3">Connect</h6>
+                    <div class="d-flex justify-content-md-start justify-content-center gap-3 flex-wrap">
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="social-icon" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon" aria-label="Email"><i class="bi bi-envelope-fill"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4 border-light opacity-25" />
+
+            <p class="text-center small m-0 footer-copy">
+                &copy; 2025 SkinBloom. Made with 💗 in the USA.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

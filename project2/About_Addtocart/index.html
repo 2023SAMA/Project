@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSMG</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="/Products_ProductId/imges/download.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+      <link rel="stylesheet" href="../shared/css.css">
+
+
+</head>
+
+<body>
+    <div>
+        <script src="about.js"></script>
+    </div>
+
+       <div id="header-placeholder"></div>
+
+
+    <section class="cart-header">
+        <h1>Wanna Know More About Us..?</h1>
+        <p>Glowing skin, just one step away ✨</p>
+    </section>
+
+<section>
+  <div class="container py-5">
+    <div class="row g-4" id="product-list"></div>
+  </div>
+</section>
+<script>const products = [
+  {
+    img: "css/assets/pic1.jpg",
+    title: "Lip Magic",
+    desc: "Explore bold, matte, and glossy lipsticks for every vibe.",
+  },
+  {
+    img: "css/assets/pic2.jpg",
+    title: "Shadow Art",
+    desc: "Vibrant palettes to match your inner artist.",
+  },
+  {
+    img: "css/assets/pic3.jpg",
+    title: "Brush Up",
+    desc: "Tools that blend magic into your daily routine.",
+  },
+  {
+    img: "css/assets/pic4.jpg",
+    title: "Gloss Heaven",
+    desc: "Shiny glosses to brighten your smile.",
+  },
+  {
+    img: "css/assets/pic5.jpg",
+    title: "Glow Time",
+    desc: "Highlighters that catch the light and hearts.",
+  },
+  {
+    img: "css/assets/pic6.jpg",
+    title: "Smooth Base",
+    desc: "Primers for a flawless foundation start.",
+  },
+];
+
+const productList = document.getElementById("product-list");
+
+products.forEach((product) => {
+  const col = document.createElement("div");
+  col.className = "col-md-4";
+
+  col.innerHTML = `
+    <div class="card">
+      <img src="${product.img}" class="card-img-top" alt="${product.title}">
+      <div class="card-body">
+        <h5 class="card-title">${product.title}</h5>
+        <p class="card-text">${product.desc}</p>
+      </div>
+    </div>
+  `;
+
+  productList.appendChild(col);
+});
+</script>
+
+    <section class="row g-0 p-5 about-section align-items-center bg-light">
+        <div class="col-md-4 mb-4 mb-md-0">
+            <img src="css/assets/aboutwall.jpeg" class="img-fluid w-100 rounded-4 shadow-img" alt="Portfolio Image" />
+        </div>
+        <div class="col-md-8">
+            <div class="bg-white p-3 rounded-4 shadow-box transition-box">
+                <h2 class="fw-bold mb-4 display-6">More About Us...</h2>
+                <p class="text-muted fs-5 lh-lg mb-4">
+                    Located in the heart of the United States, our skincare shop is dedicated to redefining beauty
+                    through simplicity, science, and self-care. We offer a thoughtfully curated range of products that
+                    blend cutting-edge dermatological research with nature’s purest ingredients — all designed to
+                    nourish, restore, and protect your skin. Whether you’re dealing with dryness, acne, sensitivity, or
+                    simply looking to maintain a radiant glow, our collection includes trusted brands known for their
+                    effectiveness and safety. We believe that skincare is not just about appearance — it’s about
+                    confidence, health, and a daily ritual of self-love. Each product on our shelves is cruelty-free,
+                    tested for quality, and crafted to suit diverse skin tones and types. With a commitment to
+                    transparency and sustainability, we invite you to explore a skincare experience that’s as empowering
+                    as it is luxurious. Welcome to a space where your natural beauty is honored, and your skin’s
+                    well-being comes first.
+                </p>
+                <p class="fst-italic text-secondary fs-6 mb-0">With pleasure.</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="iframe-section d-flex justify-content-center align-items-center">
+        <div class="content-box text-center">
+            <h2 class="fw-bold mb-4">Explore Our Skincare location</h2>
+            <p class="text-muted mb-4">
+                Trusted by millions for clean, effective skincare solutions.
+            </p>
+
+            <div class="iframe-wrapper shadow-lg rounded-4 overflow-hidden">
+                <iframe src="https://www.theordinary.com/en-us" title="Skincare Company Preview" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+  <script src="../shared/shared.js"></script>
+
+
+</body>
+</html>

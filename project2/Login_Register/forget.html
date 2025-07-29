@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSMG</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../shared/css.css">
+  <link rel="icon" type="image/png" href="/Products_ProductId/imges/download.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="text-decoration-none">
+  <div id="header-placeholder"></div>
+   <div id="overlay" class="position-fixed top-0 start-0 w-100 h-100 " style="z-index: 990;"></div>
+  <div id="messagebox" class="position-fixed fw-bold rounded text-bg-danger top-50 start-50 translate-middle p-4 d-none animate" style="z-index:999 ; width: 300px; text-align: center; background-color: rgb(200,200,200);">
+    <i class="fas fa-exclamation-triangle"></i>
+    <span id="messageText"></span>
+    <br/>
+    <button id="closemessage" class="btn btn-light mt-3 px-4">ok</button>
+  </div>
+    <!-- Forget Password Form -->
+  <div class="card p-4  border-0 form-card animate__animated animate__fadeInUp w-50 " id="forgetform">
+    <div class="form-content">
+      <form id="forgetPasswordForm" >
+        <h1 class="text-center mb-4 pt-3 pb-3">Forgot Password</h1>
+        <div class="input_field mb-3">
+          <i class="fas fa-envelope icon"></i>
+          <label class="form-label mt-3">Email Address:</label>
+          <input type="email" name="email" class="form-control input-focus glow-input" placeholder="Enter your registered Email" required>
+        </div>
+
+        <div class="d-flex justify-content-center mb-3">
+          <button id="forgetbtn" class="btn w-50 btn-primary" type="submit">Send Reset Code</button>
+        </div>
+
+        <div class="text-center mt-3">
+        <i class=" arrow fa-solid fa-arrow-right pl-5"></i>
+          <p class="d-inline">  Back to your</p>
+          <a href="login.html" id="showlogin" class="text-decoration-none">Log In</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- code form -->
+  <div class="card p-4  border-0 form-card animate__animated animate__fadeInUp w-50 d-none" id="CodeForm">
+    <div class="form-content">
+      <form id="verifyCodeForm" class="d-none" >
+        <h1 class=" mb-4 pt-3 pb-3">verify Code</h1>
+        <div class="input_field mb-3">
+          <i class=" fa-solid fa-key"></i>
+          <label class="form-label mt-3">Enter The Code:</label>
+          <input type="number" name="resetcode" class="form-control input-focus glow-input" placeholder="Enter your code"  maxlength="6" required>
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <button id="codebtn" class="btn w-50 btn-primary" type="submit">Verify</button>
+        </div>
+        <div class="text-center mt-3">
+        <i class=" arrow fa-solid fa-arrow-right pl-5"></i>
+          <p class="d-inline">  Back to your</p>
+          <a href="login.html" id="showlogin" class="text-decoration-none">Log In</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- reset password -->
+    <div class="card p-4  border-0 form-card animate__animated animate__fadeInUp w-50 d-none" id="resetPasswordCard">
+    <div class="form-content">
+      <form id="Resetform">
+        <h1 class=" mb-4 pt-3 pb-3">Reset Password</h1>
+        <div class="input_field mb-3">
+        <i class="fas fa-lock icon"></i>
+          <label class="form-label mt-3">New Password:</label>
+          <input type="password" name="newpass" class="form-control input-focus glow-input" placeholder="Enter New Password" >
+        </div>
+         <div class="input_field mb-3">
+        <i class="fas fa-lock icon"></i>
+          <label class="form-label mt-3">Confirm Password:</label>
+          <input type="password" name="Confirmnewpass" class="form-control input-focus glow-input" placeholder="Enter Confirm Password"  >
+        </div>
+        <div class="d-flex justify-content-center mb-3">
+          <button id="resetbtn" class="btn w-50 btn-primary" type="submit">Reset</button>
+        </div>
+        <!-- <div class="text-center mt-3">
+         <i class=" arrow fa-solid fa-arrow-right pl-5"></i>
+          <p class="d-inline">  Back to your</p>
+          <a href="login.html" id="showlogin" class="text-decoration-none">Log In</a>
+        </div> -->
+      </form>
+    </div>
+  </div>
+
+
+   <div id="footer-placeholder"></div>
+  <script src="./Js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="app1.js" defer></script>
+  <script src="../shared/shared.js"></script>
+
+</body>
+</html>

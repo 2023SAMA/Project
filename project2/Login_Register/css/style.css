@@ -1,0 +1,238 @@
+:root{
+  --primary-color: #ec003f;
+  --secondary-color: #ffa1ad;
+  --third-color:#c70036;
+  --input-border-color: #f6b4bd;
+  --input:#f9eff0;
+  --textcolor: #333;
+  --bg-color:#c91971;
+  --white: #fff;
+  --gray: #626161;
+  --border-radius: 25px
+}
+body {
+  background: linear-gradient(50deg, var(--input-border-color), var(--input));
+}
+.form-card{
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--third-color));
+  background-size: 100% 100%;
+    box-shadow: 0 0 30px 20px rgba(255, 255, 255, 0.7), 
+              0 0 30px 20px rgba(255, 255, 255, 0.9), 
+              0 0 60px 20px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease-in-out;
+
+}
+.form-card .form-content {
+  background-color: var(--white);
+  border-radius: calc(var(--border-radius));
+  padding: 20px;
+}
+
+#loginform, #registerform, #forgetform, #resetPasswordCard, #CodeForm {
+  width: 500px;
+  margin: 80px auto;
+}
+
+ .form-card .input_field i{
+   color: var(--primary-color);
+ }
+ .form-card h1{
+  color: var(--white);
+  font-family: cursive;
+ }
+ .form-card .input_field input{
+  border: 2px solid var(--input-border-color);
+  background-color: var(--input);
+ }
+ .form-card .input_field input:focus{
+  border-color: var(--secondary-color);
+  box-shadow: var(--secondary-color) 0px 0px 10px;
+  animation: none;
+ }
+ .form-card label ,p,.button{
+  color: var(--gray);
+  font: 1em sans-serif;
+  font-weight: bolder;
+  font-family:cursive;
+ }
+ .form-card a{
+  font-weight: bolder;
+  color: var(--primary-color);
+  font-family:cursive;
+ }
+.form-card a:hover{
+  color: var(--third-color);
+}
+.form-card .form-check-input:checked ,
+.form-card .form-check-input:focus{
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: var(--secondary-color) 0px 0px 10px;
+}
+.form-card .btn-primary{
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--third-color));
+  border: none;
+  font-weight: bolder;
+  font-family: cursive;
+}
+.form-card .btn-primary:hover {
+   scale: 1.05;
+  transition:  0.3s ease-in-out;
+}
+ .form-card::before {
+  content: "";
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 140px;
+  width: 100%;
+  z-index: 0;
+  border-radius: var(--border-radius);
+  border-bottom-left-radius: 50% 20px;
+  border-bottom-right-radius: 50% 20px;
+}
+ .form-card form > i,
+.form-card h1 {
+  position: relative;
+  z-index: 1;
+}
+.glow-input{
+  box-shadow: 0 5px 10px rgb(250,250,250,0.5);
+  animation: glow 1.1s infinite alternate;
+}
+@keyframes glow{
+   0% {
+    box-shadow: 0 0 5px rgb(250,250,250), 0 0 5px var(--primary-color);
+  }
+  
+  100%{
+    box-shadow: 0 0 15px rgb(250,250,250), 0 0 15px var(--primary-color);
+  }
+} 
+ .arrow{
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: large;
+ }
+ .arrow:hover{
+  transform: translatex(5px);
+  transition: all 0.3s ease-in-out;
+ }
+ .animate {
+    transform: scale(0.8);
+    opacity: 0;
+  } 
+
+  .show-animate {
+   animation: popup 0.3s ease forwards;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  @keyframes popup {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(20, 20, 20,0.7); 
+  backdrop-filter: blur(1px); 
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 0.5;}  
+}
+#overlay.active {
+  opacity: 1;
+  visibility: visible;
+  animation: fadeIn 0.1s ease forwards;
+}
+
+/* 📱 Mobile */
+@media (max-width: 767px) {
+  .form-card {
+    width: 90%;
+    padding: 20px 15px;
+  }
+
+  .form-card h1 {
+    font-size: 1.5rem;
+  }
+
+  input.form-control,
+  button.btn {
+    font-size: 0.95rem;
+    height: 42px;
+  }
+
+  .input_field {
+    margin-bottom: 1rem;
+  }
+
+  #messagebox {
+    width: 85% !important;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 200px) 
+ {
+  .form-card{
+    width: 95%;
+    padding: 15px;
+  }
+  .form-card h1{
+    font-size: 1.4rem;;
+  }
+  .form-card .input_field input{
+    font-size: 0.9rem;
+    height: 40px;
+  }
+  .form-card .btn-primary{
+    width: 100%;
+    height: 100px;
+    font-size: 1rem;
+  }
+  .form-card .input_field i {
+    font-size: 1.2rem;
+  }
+  .form-card label, p, .button{
+    font-size: 0.9rem;
+  }
+
+
+ }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .form-card {
+    width: 70%;
+    padding: 25px;
+  }
+
+  .form-card h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* 💻 Desktop large */
+@media (min-width: 1024px) {
+  .form-card {
+    width: 500px;
+    padding: 30px;
+  }
+
+  .form-card h1 {
+    font-size: 2rem;
+  }
+}

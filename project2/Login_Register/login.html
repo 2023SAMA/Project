@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JSMG</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../shared/css.css">
+  <link rel="icon" type="image/png" href="/Products_ProductId/imges/download.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body class="text-decoration-none">
+  <div id="header-placeholder"></div>
+  <div id="overlay" class="position-fixed top-0 start-0 w-100 h-100 " style="z-index: 990;"></div>
+  <div id="messagebox" class="position-fixed fw-bold rounded text-bg-danger top-50 start-50 translate-middle p-4 d-none animate__animated animate__fadeIn" style="z-index:999 ; width: 300px; text-align: center; background-color: rgb(200,200,200);">
+    <i class="fas fa-exclamation-triangle"></i>
+    <span id="messageText"></span>
+    <br/>
+    <button id="closemessage" class="btn btn-light mt-3 px-4">ok</button>
+  </div>
+  <!-- Login Form -->
+    <div class="card p-4  border-0 form-card animate__animated animate__fadeInUp " id="loginform">
+    <div class="form-content ">
+    <form id="myform" >
+      <h1 class="text-center mb-4 mt-3 ">Log In</h1>
+      <div class="input_field mb-3">
+        <i class="fas fa-envelope icon"></i>
+        <label class="form-label pt-4 mt-3 pt-3">Email:</label>
+        <input type="email" class="form-control input-focus glow-input" placeholder="Enter your Email" title="Email" />
+      </div>
+      <div class="input_field mb-3">
+        <i class="fas fa-lock icon"></i>
+        <label class="form-label">Password:</label>
+        <input type="password" class="form-control input-focus glow-input" placeholder="Enter your Password" title="Password" />
+      </div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="remember" />
+          <label class="form-check-label " for="remember">Remember me</label>
+        </div>
+        <a href="forget.html" class="text-decoration-none" id="showforget">Forget Password?</a>
+      </div>
+       <div class="d-flex justify-content-center mb-3">
+      <button id="button" class="btn w-75 text btn-primary" type="submit">Log In</button>
+      </div>
+      <div class="text-center mt-3">
+        <p class="d-inline">Don't have an account?</p> <a href="./reg.html" id="showregister" class="text-decoration-none" >Register</a>
+      </div>
+    </form>
+    </div>
+  </div>
+      <!-- <div id="footer-placeholder"></div> -->
+  <!-- Register Form -->
+     <!-- <div class="card p-4  border-0 form-card animate__animated animate__fadeInUp w-50 d-none " id="registerform">
+      <div class="form-content">
+      <form id="form2">
+      <h1 class="text-center mb-4 pt-3 pb-3">Registration</h1>
+      <div class="row mb-3 pt-4 ">
+         <div class="input_field mb-3 col-md-6">
+          <i class="fas fa-user"></i>
+        <label class="form-label">Name:</label>
+        <input type="text" name="name" class="form-control input-focus glow-input" placeholder="Enter your Name" title="name" />
+      </div>
+         <div class="input_field mb-3 col-md-6">
+        <i class="fas fa-phone"></i>
+        <label class="form-label">Phone:</label>
+        <input type="tel" name="phone" pattern="[0-9]{11}" maxlength="11" class="form-control input-focus glow-input" placeholder="Enter your phone number" title="phone" />
+      </div>
+      <div class="input_field mb-3">
+        <i class="fas fa-envelope icon"></i>
+        <label class="form-label">Email:</label>
+        <input type="email" name="email" class="form-control input-focus glow-input" placeholder="Enter your Email" title="Email" />
+      </div>
+      <div class="row mb-3 w-100 ">
+      <div class="input_field mb-3 col-md-6">
+        <i class="fas fa-lock icon"></i>
+        <label class="form-label">Password:</label>
+        <input type="password" name="password" class="form-control input-focus glow-input" placeholder="Enter your Password" id="Password" />
+           <small class="form-text text-muted ms-2 ps-1">🔐 at least 8 letters</small>
+      </div>
+         <div class="input_field mb-3 col-md-6">
+        <i class="fas fa-lock"></i>
+        <label class="form-label">Confirm Password:</label>
+        <input type="password" name="confirm_password" class="form-control input-focus glow-input" placeholder="Enter your Password" title="password" />
+      </div>
+      </div>
+      
+      <div class="mb-3 gap-3">
+      <label class="form-label">Gender:</label>
+     <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+      <label class="form-check-label" for="female">Female</label>
+      </div>
+      <div class="form-check-inline">
+      <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+      <label class="form-check-label" for="male">Male</label>
+      </div>
+      <div class="form-check-inline">
+       <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+       <label class="form-check-label" for="other">Other</label>
+     </div>
+     </div>
+      <div class="d-flex justify-content-center mb-3">
+      <button id="button2" class="btn w-50 btn-primary" type="submit" >Register</button>
+      </div>
+      <div class="text-center mt-3">
+        <p class="d-inline">Already have an account?</p> <a href="#" id="showlogin" class="text-decoration-none">Log In</a>
+      </div>
+     </form>
+    </div>
+   </div> -->
+
+
+
+
+  <div id="footer-placeholder"></div>
+  <script src="./Js/bootstrap.bundle.min.js"></script>
+  <script  src="app1.js" defer></script>
+<script src="../shared/shared.js"></script>
+
+</body>
+</html>

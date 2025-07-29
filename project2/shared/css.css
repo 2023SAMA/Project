@@ -1,0 +1,247 @@
+
+:root{
+  --clr-white: #fff;
+  --clr-pink: #f9a5b3;
+  --clr-hotpink: #ff4081;
+  --clr-backpink: #e75b83;
+  --clr-feature: #f9f9f9;
+  --clr-footersocial: #d81b60;
+  --clr-footerback:  #fddde6;
+}
+
+/*header*/
+.header {
+    background: var(--clr-pink);
+    width: 100%;
+}
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.logo {
+    font-size: 30px;
+    font-weight: bolder;
+    color: var(--clr-white);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+.menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background: var(--clr-white);
+    border-radius: 2px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+.nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav a:hover {
+    color: var(--clr-white);
+}
+
+.dropdowncat {
+    position: relative;
+    display: inline-block;
+}
+.dropbtn {
+    text-decoration: none;
+    padding: 8px 12px;
+    display: inline-block;
+}
+.dropdowncat-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-white);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+.dropdowncat-content a {
+    padding: 10px 14px;
+    text-decoration: none;
+    display: block;
+}
+.dropdowncat-content a:hover {
+    background-color: var(--clr-backpink);
+}
+.dropdowncat:hover .dropdowncat-content {
+    display: block;
+}
+
+/* Right section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box {
+    position: relative;
+    width: 200px;
+}
+.search-box input {
+    width: 100%;
+    background: var(--clr-footerback);
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 3px solid var(--clr-hotpink);
+    border-radius: 16px;
+    outline: none;
+}
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--clr-white);
+    width: 100%;
+    color: black;
+    border-radius: 16px;
+    display: none;
+    z-index: 999;
+}
+.dropdown div {
+    padding: 10px;
+    cursor: pointer;
+}
+.dropdown div:hover {
+    background-color: var(--clr-backpink);
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+}
+.icon img {
+    width: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--clr-pink);
+        gap: 15px;
+        margin-top: 10px;
+        padding: 10px 0;
+    }
+    .nav.active {
+        display: flex;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+
+/*footer*/
+.footer {
+  background-color: var( --clr-footerback);
+  padding: 50px 10%;
+  z-index: 0;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-caption {
+  max-width: 30%;
+}
+.footer-caption h2 {
+  font-size: 30px;
+  color: #223;
+  margin-bottom: 10px;
+}
+.footer-caption p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.company-section {
+  margin-left: -30px;
+}
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #223;
+}
+.footer-links ul,
+.footer-contact ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li,
+.footer-contact ul li {
+  margin-bottom: 8px;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  color: #223;
+  font-size: 16px;
+  transition: 0.3s;
+}
+.footer-links ul li a:hover {
+  color: var(--clr-hotpink);
+}
+.footer-contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-contact i {
+  color: var(--clr-hotpink);
+  font-size: 16px;
+}
+.footer-social {
+  text-align: center;
+  margin: 30px 0;
+}
+.footer-social a {
+  color: var(--clr-hotpink);
+  margin: 0 10px;
+  font-size: 30px;
+  transition: 0.3s;
+}
+.footer-social a:hover {
+  color: var(--clr-hotpink);
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+}
+.footer-bottom a {
+  text-decoration: none;
+}
+.footer-bottom a:hover {
+  color:var(--clr-hotpink);
+}
+
